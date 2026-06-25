@@ -1,0 +1,127 @@
+.mission-vision-section {
+  position: relative;
+  background-color: #020503;
+  padding: 8rem 2rem;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* Subtle tech grid background */
+.mv-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(var(--primary-rgb), 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Central glowing orb */
+.mv-glow-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(var(--primary-rgb),0.15) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mv-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.mv-tech-center {
+  position: absolute;
+  top: -160px; /* Move further up so his chest is above the border */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 450px;
+  z-index: 1; /* Place behind the cards */
+  mix-blend-mode: screen; /* Works better than lighten for dark grays */
+  filter: contrast(1.1); /* Deepen blacks to help blend mode */
+  pointer-events: none;
+  /* Fade out the hard edges so the square box disappears */
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 75%);
+}
+
+.mv-card {
+  position: relative;
+  z-index: 10; /* Place above the technician */
+  background: rgba(10, 25, 15, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
+  margin-top: 40px; /* Push the cards down slightly */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(var(--primary-rgb),0.05);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(var(--primary-rgb), 0.5);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 0 30px rgba(var(--primary-rgb),0.15);
+}
+
+.mv-icon-wrapper {
+  background: linear-gradient(135deg, rgba(var(--primary-rgb),0.2), rgba(var(--primary-rgb),0.05));
+  border: 1px solid rgba(var(--primary-rgb),0.4);
+  padding: 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(var(--primary-rgb),0.2);
+}
+
+.mv-icon {
+  color: #5bb32b;
+}
+
+.mv-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.mv-text {
+  color: #b0b8b4;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .mv-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .mv-card {
+    padding: 2.5rem 2rem;
+  }
+}

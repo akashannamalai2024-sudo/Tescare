@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+*.local
+
+# macOS files
+.DS_Store
+
+# Local Node.js binaries/archives
+node-v20.11.1-darwin-arm64/
+node-v20.11.1-darwin-arm64.tar.gz

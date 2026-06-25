@@ -1,0 +1,64 @@
+.twc-section {
+  background: linear-gradient(180deg, #18181b 0%, #05020a 100%);
+  padding: 5rem 2rem 8rem 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.twc-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twc-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.twc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.twc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.twc-icon-wrapper {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.twc-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #d1d5db;
+  max-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .twc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .twc-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

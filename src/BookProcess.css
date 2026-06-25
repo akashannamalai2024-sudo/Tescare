@@ -1,0 +1,117 @@
+.book-process-section {
+  background-color: #000000;
+  padding: 4rem 2rem 8rem 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.bprocess-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.bprocess-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.bprocess-header h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.bprocess-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.bprocess-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bp-step-num {
+  width: 64px;
+  height: 64px;
+  background-color: #4caa17;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(76, 170, 23, 0.3);
+}
+
+.bp-step-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.bp-step-desc {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.bprocess-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.bprocess-feature {
+  border: 1px solid #4caa17;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(76, 170, 23, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: transform 0.3s ease;
+}
+
+.bprocess-feature:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(76, 170, 23, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.bp-feature-icon {
+  color: #4caa17;
+  flex-shrink: 0;
+}
+
+.bp-feature-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+@media (max-width: 900px) {
+  .bprocess-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .bprocess-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .bprocess-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .bprocess-features-grid {
+    grid-template-columns: 1fr;
+  }
+}

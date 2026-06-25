@@ -1,0 +1,64 @@
+.contact-hours-section {
+  background-color: #030604; /* Very dark background to match the map section below */
+  padding: 4rem 2rem 8rem 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.ch-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.ch-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.ch-icon {
+  color: #4caa17;
+}
+
+.ch-header h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.ch-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ch-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.05rem;
+}
+
+.ch-row:last-child {
+  border-bottom: none;
+}
+
+.ch-day {
+  color: #f3f4f6;
+  font-weight: 400;
+}
+
+.ch-time {
+  color: #d1d5db;
+  font-weight: 400;
+}
+
+.ch-highlight {
+  color: #4caa17;
+  font-weight: 500;
+}

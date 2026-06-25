@@ -1,0 +1,266 @@
+.service-booking-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.card-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.success-icon {
+  color: var(--primary-green, #4CAA17);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.success-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.success-content p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.card-field {
+  margin-bottom: 1.5rem;
+}
+
+.card-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.card-input-wrapper,
+.card-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.card-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f2937;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
+
+.card-input-wrapper .card-input {
+  padding-left: 2.75rem;
+}
+
+.card-input:focus {
+  border-color: var(--primary-green, #4CAA17);
+  box-shadow: 0 0 0 3px rgba(76, 170, 23, 0.15);
+}
+
+.card-input-icon {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+}
+
+.icon-green {
+  color: var(--primary-green, #4CAA17);
+}
+
+/* Premise Type Toggle Buttons */
+.card-toggle-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.card-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--primary-green, #4CAA17);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--primary-green, #4CAA17);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-toggle-btn.active {
+  background-color: var(--primary-green, #4CAA17);
+  color: #ffffff;
+}
+
+.card-toggle-btn:hover {
+  background-color: rgba(76, 170, 23, 0.05);
+}
+
+.card-toggle-btn.active:hover {
+  background-color: var(--primary-green-hover, #3E8D12);
+}
+
+/* Select Box */
+.card-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  padding-right: 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f2937;
+  outline: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s ease;
+}
+
+.card-select:focus {
+  border-color: var(--primary-green, #4CAA17);
+}
+
+.card-chevron {
+  position: absolute;
+  right: 1rem;
+  pointer-events: none;
+  color: var(--primary-green, #4CAA17);
+}
+
+/* Price Section */
+.card-price-section {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.price-title {
+  display: block;
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.price-value {
+  display: flex;
+  align-items: baseline;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+}
+
+.price-currency {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.price-amount {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.card-helper-text {
+  font-size: 0.9rem;
+  color: var(--primary-green, #4CAA17);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Actions */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-book-now {
+  background-color: var(--primary-green, #4CAA17);
+  color: #ffffff;
+}
+
+.btn-book-now:hover {
+  background-color: var(--primary-green-hover, #3E8D12);
+  transform: translateY(-1px);
+}
+
+.btn-talk-agent {
+  background-color: var(--primary-green, #4CAA17);
+  color: #ffffff;
+}
+
+.btn-talk-agent:hover {
+  background-color: var(--primary-green-hover, #3E8D12);
+  transform: translateY(-1px);
+}
+
+/* Chrome/Safari input spinners removal */
+.card-input[type="number"]::-webkit-inner-spin-button,
+.card-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
